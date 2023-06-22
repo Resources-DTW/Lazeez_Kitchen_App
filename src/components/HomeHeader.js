@@ -3,6 +3,11 @@ import React from "react";
 import { Feather, AntDesign, FontAwesome } from "@expo/vector-icons";
 import { Header, HomeLogo, LocationView, SearchView } from "../global/styles";
 import { useNavigation } from "@react-navigation/native";
+import styled from "styled-components/native";
+
+const Location = styled.Text`
+  padding: ${(props) => props.theme.space[2]};
+`;
 
 const HomeHeader = () => {
   const navigation = useNavigation();
@@ -21,7 +26,7 @@ const HomeHeader = () => {
             style={{ alignItems: "center", flexDirection: "row" }}
             onPress={() => navigation.navigate("MapScreen")}
           >
-            <Text style={{ padding: 5 }}>Chennai, Tamilnadu</Text>
+            <Location>Chennai, Tamilnadu</Location>
             <Feather name="map-pin" size={24} color="#F49F1C" />
           </TouchableOpacity>
         </LocationView>
