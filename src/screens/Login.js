@@ -102,9 +102,6 @@ const Login = ({ navigation }) => {
         </OrContainer>
       </View>
       <SocialLoginView>
-        {/* <TouchableOpacity onPress={() => {}}>
-          <FontAwesome name="envelope" size={24} color="gray" />
-        </TouchableOpacity> */}
         {!isLoading ? (
           <TouchableOpacity onPress={() => Glogin(userInfo)}>
             <Image source={require("../assets/images/gmail.png")} />
